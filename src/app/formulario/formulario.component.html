@@ -1,0 +1,49 @@
+<form [formGroup]="formulario" (ngSubmit)="ValidarDatos()">
+    <fieldset>
+        <legend>Formulario de Entrevista</legend>
+    <ul>
+        <li>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" formControlName="nombre" type="text" placeholder="Nombre" required="true"/> <br><br>
+        </li>
+        <li>
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" formControlName="apellidos" type="text" placeholder="Apellidos" required="true"/> <br><br>
+        </li>
+        <label for="pais"> Pais: </label> <br>
+            <select id = "pais" formControlName="pais" name="pais">
+                <option value="Pais1"> Chile</option>
+                <option value="Pais2"> Chile2</option>
+                <option value="Pais3"> Chile3</option>
+            </select>
+        <li>
+        
+        <li>
+            <label for="Ciudad">Ciudad</label>
+            <input id="Ciudad" formControlName="Ciudad" type="text" placeholder="Ciudad" required="true"/> <br><br>
+        </li>
+        <li>
+
+            <label id="genero" >Seleccione genero:</label><br>
+
+            <input id="genero" formControlName="genero" type="radio" name="genero" value="masculino"/>
+            <label for="masculino"> Masculino </label><br>
+
+            <input id="genero" formControlName="genero" type="radio" name="genero" value="femenino"/>
+            <label for="femenino"> Femenino </label><br>
+
+            <input id="genero" formControlName="genero" type="radio" name="genero" value="otro"/>
+            <label for="otro"> Otro </label><br>
+        </li>
+        <ul id="boton">
+            <a [routerLink]="['']" routerLinkActive="router-link-active">
+                <button  type="button" >Cancelar</button>
+                <button type="submit" >Enviar Datos</button>
+            </a>
+        </ul>
+    </ul>
+    </fieldset>
+
+</form>
+<!--JS-->
+<script src="js/script.js" type="text/javascript" charset="utf-8" async defer ></script>
